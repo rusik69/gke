@@ -30,5 +30,5 @@ spec:
         - destination:
             port:
               number: 20001
-            host: kiali-ce
+            host: kiali
 
