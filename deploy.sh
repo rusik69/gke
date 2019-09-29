@@ -4,3 +4,4 @@ set -x
 ./helm.sh
 ./istio.sh
 ./gitlab.sh
+./prometheus.sh
