@@ -2,8 +2,8 @@
 set -x
 set -e
 
-curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.2.4 sh -
-export PATH="$PATH:./istio-1.2.4/bin"
+curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.3.3 sh -
+export PATH="$PATH:./istio-1.3.3/bin"
 kubectl create ns istio-system || true
 kubectl apply -f kiali-secret.yaml -n istio-system
 kubectl label namespace default istio-injection=enabled || true
