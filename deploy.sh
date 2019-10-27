@@ -2,6 +2,6 @@
 set -e
 set -x
 ./helm.sh
-./istio.sh
-./gitlab.sh
+#./istio.sh
+#./gitlab.sh
 ./prometheus.sh
