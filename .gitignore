@@ -3,3 +3,4 @@ kube-prometheus/*
 .idea/*
 terraform/.terraform/*
 terraform/*.tfstate*
+tensorflow/model*
