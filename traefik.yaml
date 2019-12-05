@@ -1,0 +1,12 @@
+rbac:
+  enabled: true
+ssl:
+  enforced: true
+  enabled: true
+acme:
+  enabled: true
+  email: rusik@4ege.ru
+  domains:
+    enabled: true
+    domainsList:
+      - main: dashboard.linkerd.rusik.dev

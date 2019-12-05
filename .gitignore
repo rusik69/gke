@@ -4,3 +4,4 @@ kube-prometheus/*
 terraform/.terraform/*
 terraform/*.tfstate*
 tensorflow/model*
+tensorflow/*.h5

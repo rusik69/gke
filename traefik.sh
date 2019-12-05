@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-helm install traefik stable/traefik --set rbac.enabled=true
+helm upgrade --install -f traefik.yaml traefik stable/traefik

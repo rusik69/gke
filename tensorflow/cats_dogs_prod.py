@@ -99,5 +99,5 @@ history = model.fit_generator(
     validation_steps=total_val // batch_size,
     callbacks=[tensorboard_callback]
 )
-tf.saved_model.save(model, "/content/drive/My Drive/katsanddogs/model/1/")
+model.save("/content/drive/My Drive/katsanddogs/model/1.h5")
 
