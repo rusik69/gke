@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-helm upgrade --install -f traefik.yaml traefik stable/traefik
+git clone https://github.com/containous/traefik-helm-chart
+helm install traefik ./traefik-helm-chart

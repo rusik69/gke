@@ -1,5 +1,23 @@
+# gcloud auth application-default login
+# https://console.cloud.google.com/apis/credentials/serviceaccountkey
+
+terraform {
+  backend "gcs" {
+    bucket  = "terraform-rusik-dev"
+    prefix  = "terraform/state"
+  }
+}
+
+data "terraform_remote_state" "foo" {
+  backend = "gcs"
+  config = {
+    bucket  = "terraform-rusik-dev"
+    prefix  = "terraform/state"
+  }
+}
+
 provider "google" {
-  credentials = "${file("~/gcp-creds.json")}"
+  credentials = file("~/gcp-creds.json")
   project     = "decent-tracer-255319"
   region      = "europe-west1"
 }
