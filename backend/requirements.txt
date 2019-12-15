@@ -1,0 +1,4 @@
+tensorflow
+flask
+google-cloud-storage
+werkzeug

@@ -1,4 +1,0 @@
-tensorflow
-flask
-flask-restful
-google-cloud-storage

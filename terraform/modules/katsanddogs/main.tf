@@ -1,6 +1,6 @@
 resource "google_storage_bucket" "katsanddogs" {
   name     = "katsanddogs"
-  location = "EU"
+  location = "US"
 }
 
 module "gke" {
