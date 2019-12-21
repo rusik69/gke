@@ -11,3 +11,4 @@ kind: Jaeger
 metadata:
   name: katsanddogs
 EOF
+kubectl apply -f jaeger-query-ingress.yaml

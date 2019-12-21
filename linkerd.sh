@@ -5,4 +5,4 @@ linkerd version
 linkerd check --pre
 linkerd install | kubectl apply -f -
 linkerd check
-kubectl apply -f ./linkerd-grafana-ingress.yaml
+kubectl apply -f ./linkerd-web-ingress.yaml

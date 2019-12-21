@@ -19,7 +19,7 @@ metadata:
     traefik.ingress.kubernetes.io/auth-secret: grafana-ingress-auth
 spec:
   rules:
-  - host: dashboard.linkerd.rusik.dev
+  - host: linkerd.rusik.dev
     http:
       paths:
       - backend:
