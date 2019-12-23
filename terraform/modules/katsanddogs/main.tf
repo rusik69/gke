@@ -15,13 +15,14 @@ module "gke" {
   ip_range_pods     = "katsanddogs-prod-pods"
   ip_range_services = "katsanddogs-prod-services"
   service_account   = "create"
+  monitoring_service = "none"
   logging_service   = "none"
   http_load_balancing	= false
 
  node_pools = [
     {
       name               = "default-node-pool"
-      machine_type       = "g1-small"
+      machine_type       = "e2-small"
       min_count          = 3
       max_count          = 3
       disk_size_gb       = 10

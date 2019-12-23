@@ -40,6 +40,7 @@ def upload_file():
             blob = bucket.blob(image_name)
             blob.upload()
         return 200, "OK"
+@app.route('/predict', methods=['GET'])
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=6969)

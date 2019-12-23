@@ -27,5 +27,5 @@ resource "google_dns_record_set" "dashboard-linkerd" {
   type         = "A"
   ttl          = 300
 
-  rrdatas = ["35.241.246.125"]
+  rrdatas = ["35.241.130.236"]
 }
