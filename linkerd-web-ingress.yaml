@@ -1,27 +1,14 @@
-apiVersion: v1
-kind: Secret
-type: Opaque
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
 metadata:
-  name: web-ingress-auth
+  name: simpleingressroute
   namespace: linkerd
-data:
-  auth: YWRtaW46JGFwcjEkdVRTY2x4bUMkeElOMkdYSDI3OHZhakFmSXZKTm51LgoK
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: web-ingress
-  namespace: linkerd
-  annotations:
-    kubernetes.io/ingress.class: "traefik"
-    ingress.kubernetes.io/custom-request-headers: l5d-dst-override:linkerd-web.linkerd.svc.cluster.local:8084
-    traefik.ingress.kubernetes.io/auth-type: basic
-    traefik.ingress.kubernetes.io/auth-secret: web-ingress-auth
 spec:
-  rules:
-  - host: linkerd.rusik.dev
-    http:
-      paths:
-      - backend:
-          serviceName: linkerd-web
-          servicePort: 8084
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`linkerd.rusik.dev`)
+    kind: Rule
+    services:
+    - name: linkerd-web
+      port: 8084
