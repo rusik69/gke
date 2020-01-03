@@ -21,11 +21,20 @@ resource "google_dns_record_set" "aws" {
   rrdatas = ["18.184.158.112"]
 }
 
+resource "google_dns_record_set" "ples" {
+  name         = "plex.rusik.dev."
+  managed_zone = google_dns_managed_zone.rusik.name
+  type         = "A"
+  ttl          = 300
+
+  rrdatas = ["18.184.158.112"]
+}
+
 resource "google_dns_record_set" "dashboard-linkerd" {
   name         = "linkerd.rusik.dev."
   managed_zone = google_dns_managed_zone.rusik.name
   type         = "A"
   ttl          = 300
 
-  rrdatas = ["35.241.130.236"]
+  rrdatas = ["35.233.41.165"]
 }

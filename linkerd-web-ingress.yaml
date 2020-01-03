@@ -12,3 +12,5 @@ spec:
     services:
     - name: linkerd-web
       port: 8084
+    tls:
+      certResolver: default

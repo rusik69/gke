@@ -10,4 +10,5 @@ gcloud container clusters get-credentials katsanddogs-prod --zone europe-west1-b
 ./helm.sh
 ./traefik.sh
 ./linkerd.sh
-./jaeger.sh
+#./jaeger.sh
+helm install katsanddogs ./catsanddogs
